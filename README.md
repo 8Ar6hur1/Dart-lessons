@@ -4,9 +4,7 @@
 3. Ключові слова "const" и "final"
 4. Типы данных (Data Types)
 5. Введение в Null Safety и тип Null
-6. Типы данных (Data Types)
-7. Введение в Null Safety и тип Null
-8. Работа с non-nullable и nullable типами
-9. Приведение/преобразование типов
-10. Типы Object? и dynamic
-11. Упражнения
+6. Работа с non-nullable и nullable типами
+7. Приведение/преобразование типов
+8. Типы Object? и dynamic
+9. Упражнения
