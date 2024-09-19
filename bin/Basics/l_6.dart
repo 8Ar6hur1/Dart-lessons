@@ -7,10 +7,7 @@ void main() {
   // Flow Analysis: Type Promotion
   // name = 'Arthur';
 
-  if (name == null)
-    return print('Unknown name');
-  else
-    print('\n${name.toUpperCase()}');
+  // return print('Unknown name');
 
   // Flow Analysis: Difinite Assignment
   String result;
@@ -35,15 +32,15 @@ void main() {
 
   // ?. : Null-aware access operator
   print(name
-      ?.toUpperCase()); // Повертає значення "null", якщо ліва частина дорівнює "null", в іншому випадку він повертає значення роботи методу
-  print(name?.length ?? 0);
+      .toUpperCase()); // Повертає значення "null", якщо ліва частина дорівнює "null", в іншому випадку він повертає значення роботи методу
+  print(name.length ?? 0);
 
   // ! : Null assertion operator
-  print(name!
+  print(name
       .toUpperCase()); // використовується, щоб сказати компілятору: "Я впевнений, що це значення не є null, тому використовуй його як ненульове".
 
   // as : casting
   num? value = 10;
-  print(value as int); // дозволяє явно вказати тип об'єкта, коли ви знаєте, що цей об'єкт є певного типу, але Dart самостійно цього не може визначити
-  
+  print(value
+      as int); // дозволяє явно вказати тип об'єкта, коли ви знаєте, що цей об'єкт є певного типу, але Dart самостійно цього не може визначити
 }
