@@ -1,4 +1,3 @@
-import 'dart:collection';
 
 void main() {
   final fruits = const ['apple', 'pineapple', 'watermelon'];
