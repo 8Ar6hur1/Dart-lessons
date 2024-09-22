@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 /*
   Упражнение № 1: Найди сумму элементов в списке.
 
@@ -5,7 +7,17 @@
 
   Напишите программу, которая на печатает сумму всех этих значений.
 */
-void main() {}
+void task_1() {
+  List<num> numbers = [1, 2.7, 5, 8.4, 10];
+
+  num sum = 0;
+
+  for (var number in numbers) {
+    sum += number;
+  }
+
+  print('Сума елементів у списку: $sum');
+}
 
 /*
   Упражнение № 2: Найди совпадение в списке.
@@ -26,7 +38,35 @@ void main() {}
 
   true
 */
-void task_2() {}
+void task_2() {
+  // Варіант: 1
+  List<dynamic> anyList = [60, 999, 14, "dart1", 45, 95, "dart", 1];
+
+  var value1 = "dart";
+  var value2 = 15;
+
+  bool containsValue1 = anyList.contains(value1);
+  bool containsValue2 = anyList.contains(value2);
+
+  print(containsValue1);
+  print(containsValue2);
+
+  // Варіант: 2
+  bool addValue = true;
+
+  List<dynamic> anyList1 = [
+    60,
+    999,
+    14,
+    "dart1",
+    45,
+    95,
+    if (addValue) "dart",
+    1,
+  ];
+
+  print(anyList1);
+}
 
 /*
   Упражнение № 3: Работа со списком.
@@ -50,4 +90,43 @@ void task_2() {}
   7. sorted list with replaced values [1, 2, 3, ...] => [10, 20, 30, ...]: [10, 20, 30, 4, 5, 6, 7, 8, 9]
   8. union list: [10, 20, 30, 4, 5, 6, 7, 8, 9, 4, 5, 6]
 */
-void task_3() {}
+void main() {
+  List<int> myList = [8, 2, 5, 4, 3, 9, 7, 1, 6]; // 1
+  print(myList.length); // 2
+
+  myList.sort((a, b) => b - a); // 3 ЗМЕНШЕННЯ
+  print(myList);
+
+  myList.sort((a, b) => a.compareTo(b)); // ЗБІЛЬШЕННЯ
+  print(myList);
+
+  List<int> sublist = myList.take(5).toList(); // 4
+  print(sublist);
+
+  int index = myList.indexOf(7); // 5
+  print(index);
+
+  sublist.removeWhere((element) => element > 7 && element <= 9); // 6
+  print(sublist);
+
+  for (int i = 0; i < myList.length; i++) {
+    // 6
+    if (myList[i] == 1) {
+      myList[i] = 10;
+    } else if (myList[i] == 2) {
+      myList[i] = 20;
+    } else if (myList[i] == 3) {
+      myList[i] = 30;
+    }
+  }
+  print(myList);
+
+  final newList = [...myList, ...sublist]; // 8
+  print(newList);
+
+  newList.sort((a, b) => a.compareTo(b));
+  print('+ $newList');
+
+  newList.sort((a, b) => b - a);
+  print('- $newList');
+}
