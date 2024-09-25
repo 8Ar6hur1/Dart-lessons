@@ -30,11 +30,43 @@
   Под задача № 3: Отсортируйте карту по ключам и выведите отсортированное меню на экран.
   Примечание: Для сортировки можете воспользоваться SplayTreeMap.
 */
-
 void main() {
-  const pizzaPrices = {
+  final pizzaPrices = {
     'Venice': 289,
     'Double Cheese': 359,
     'Roman Margherita': 299,
   };
+
+  const myOrder = [
+    'Venice',
+    'Double Cheese',
+    'Roman Margherita',
+    'Hawaiian',
+  ];
+
+  int totalAmount = 0;
+
+  List<String> unavailablePizzas = [];
+
+  for (String pizza in myOrder) {
+    if (pizzaPrices.containsKey(pizza)) {
+      totalAmount += pizzaPrices[
+          pizza]!; // ! - це "null assertion operator" або "оператор заперечення null".
+    } else {
+      unavailablePizzas.add(pizza);
+    }
+  }
+  print(
+      'Заказано ${myOrder.length} пиццы из ${pizzaPrices.length} на сумму: $totalAmount рублей');
+
+  if (unavailablePizzas.isNotEmpty) {
+    print(
+        'Следующие пиццы отсутствуют в меню: ${unavailablePizzas.join(', ')}.');
+
+    pizzaPrices['Pepperoni'] = 199;
+
+    for (final pizza in pizzaPrices.entries) {
+      print('${pizza.key}: ${pizza.value}руб.');
+    }
+  }
 }
