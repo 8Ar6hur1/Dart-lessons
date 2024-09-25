@@ -1,5 +1,5 @@
 void main() {
-  const fruits = const ['apple', 'peneapple', 'warmelon'];
+  const fruits = ['apple', 'peneapple', 'warmelon'];
 
   for (int i = 0; i < fruits.length; i++) {
     final fruit = fruits[i];

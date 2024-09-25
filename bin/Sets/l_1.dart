@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:math';
 
 void main() {
@@ -15,7 +14,7 @@ void main() {
     var uniqueNumbers = Set.from(numbers); // Set
     print(uniqueNumbers);  // Виведе: {1, 2, 3, 4, 5}
   */
-  var setFour = Set.from([1, 'hello', true]);
+  var setFour = {1, 'hello', true};
 
   // Checking the content
   final fruits = {'apple', 'pineapple', 'watermelon'};
