@@ -11,6 +11,8 @@ void main() {
 
   String text = 'What\'s your name?'; // Result: 'What's your name?'
 
+  print('$myInt + $myDouble + $myDouble1 + $text');
+
   String myFio = '''
   Boryslavsky
   Arthur
@@ -33,10 +35,13 @@ void main() {
   var a = true; // Result: true
   var b = false; // Result: false
 
+  print('$a + $b');
+
   // Rune (представляє собою послідовність кодировки "UTF - 32")
   Runes hello = Runes(
       'Hello, Dart!'); // Result: (72, 101, 108, 108, 111, 44, 32, 68, 97, 114, 116, 33)
-  print(hello); // Result: (72, 101, 108, 108, 111, 44, 32, 68, 97, 114, 116, 33)
+  print(
+      hello); // Result: (72, 101, 108, 108, 111, 44, 32, 68, 97, 114, 116, 33)
 
   // \uXXXX
   var input = Runes('\u2665 \u{1f600}'); // Result: (9829, 32, 128512)
