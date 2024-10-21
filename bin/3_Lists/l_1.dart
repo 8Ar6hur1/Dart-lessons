@@ -10,6 +10,8 @@ void main() {
 
   var orange = <String>[];
 
+  print(orange + apple);
+
   // Accesseing Element / Доступ до елементу
   final secondElement = fruits[1];
   print(secondElement);

@@ -3,7 +3,9 @@ import 'dart:math';
 void main() {
   // Creating a Set
   final Set<int> setOne = {};
-  final seTwo = <int>{};
+  final setTwo = <int>{};
+
+  print('$setOne + $setTwo');
 
   final setThree = {1, 2, 3, 3};
   print(setThree);
@@ -15,6 +17,8 @@ void main() {
     print(uniqueNumbers);  // Виведе: {1, 2, 3, 4, 5}
   */
   var setFour = {1, 'hello', true};
+
+  print(setFour);
 
   // Checking the content
   final fruits = {'apple', 'pineapple', 'watermelon'};
@@ -64,8 +68,10 @@ void main() {
   final uniqueValue = <int>{};
   final duplicates = <int>{};
 
-  for (int number in randomList.toSet()) { // 'toSet()' Всі повторювані елементи будуть видалені ще до початку циклу.
-    if (uniqueValue.contains(number)) { // 'contains' - це метод який перевіряє елемент в колекції, то метод повертає true, якщо ні — false
+  for (int number in randomList.toSet()) {
+    // 'toSet()' Всі повторювані елементи будуть видалені ще до початку циклу.
+    if (uniqueValue.contains(number)) {
+      // 'contains' - це метод який перевіряє елемент в колекції, то метод повертає true, якщо ні — false
       duplicates.add(number);
     }
     uniqueValue.add(number);

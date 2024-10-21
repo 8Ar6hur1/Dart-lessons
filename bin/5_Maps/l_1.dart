@@ -6,6 +6,8 @@ void main() {
   final emptySomething = {};
   final mySet = <String>{};
 
+  print('$emptyMap + $emptyMap1 + $emptySomething + $mySet');
+
   final caloriesInFruit = {
     'apple': 200,
     'peneapple': 150,
